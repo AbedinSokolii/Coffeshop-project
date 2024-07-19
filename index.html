@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+
+<!-- TO DO LIST : 1.img src photos and anything else you havent added , because you had no correct photos 
+2. Span edhe parametrat e qito se i kom bo do komente veq per jokes.  
+-->
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name = "viewport" content="width=device-width, initial-scale=1.0">
+    <title> Coffee Shop </title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+ 
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <style>
+
+        /* Adjust the height of Swiper slides */
+        
+       #swiper-img{
+        height: 100px;
+        width: 100px;
+       }
+        /* Your other styles go here */
+
+
+  </style>
+  </head>
+  <body>
+    <header class="header">
+      <a href="#" class="logo">
+        <img src="images/logo.png" alt=""> 
+      </a>
+
+      <nav class="navbar">
+        <a href="#Home"> Home </a>
+        <a href="#about"> About </a>
+        <a href="#menu"> Menu </a>
+        <a href="#products"> Products </a>
+        <a href="#review"> Review </a>
+        <a href="#contact"> Contact </a>
+        <a href="index3.php"> Log-In </a>
+      </nav>
+
+      <div class="icons">
+        <div class="fas fa-search" id="search-btn"> </div>
+        <div class="fas fa-shopping-cart" id="cart-btn"> </div>
+        <div class="fas fa-bars" id="menu-btn"> </div> 
+
+      <div class="search-form">
+        <input type="search" id="search-box" placeholder="search here..." >
+        <label for="search-box" class="fas fa-search"> </label>
+       
+      </div> 
+    
+
+      <div class="cart-items-container">
+
+        <div class="cart-item">
+          <span class="fas fa-times"> </span>
+          <img src="images/coffe1.jpg" alt="">
+          <div class="content">
+            <h3>Cappuccino</h3>
+            <div class="price"> $5.00 </div>
+          </div>
+        </div>
+
+        <div class="cart-item">
+          <span class="fas fa-times"> </span>
+          <img src="images/coffe2.jpg" alt="">
+          <div class="content">
+            <h3>Americano</h3>
+            <div class="price"> $5.00 </div>
+          </div>
+        </div>
+
+        <div class="cart-item">
+          <span class="fas fa-times"> </span>
+          <img src="images/coffe3.jpg" />
+          <div class="content">
+            <h3>Espresso</h3>
+            <div class="price"> $5.00 </div>
+          </div>
+        </div>
+
+        <a href="index3.php" class="btn"> checkout now </a>
+      
+    </header>
+
+    <section class="home" id="home">
+      
+      <div class="content">
+        <h3>Fresh coffee in the morning</h3>
+        <p>
+          Join our community of coffee enthusiasts who share a love for exceptional coffee.
+        </p>
+        <a href="#" class="btn">Get Yours Now</a>
+  
+      </div>
+
+    </section>
+    
+    
+
+    <section class="about" id="about">
+      <h1 class="heading"><span>News</span> & About <span>Us</span></h1>
+
+      <div class="row">
+
+        <div class="image">
+          <img src="images/image1.jpg">
+        </div>
+
+        <div class="content">
+          <h3>
+            what makes our coffee special
+            
+          </h3>
+          <p>
+            At the heart of our coffee is a selection of premium, ethically sourced beans from the world's most renowned coffee regions. 
+            We meticulously choose beans that meet the highest standards, ensuring a rich and distinctive flavor profile.
+          </p>
+
+          <a href="index2.php" class="btn"> learn more </a> 
+        </div> <!-- Removed one unnesecary closing div -->
+      </div>
+    </section>
+
+
+
+
+    
+     
+  
+  
+    
+<!--menu section     -->
+    <section class="menu" id="menu"> 
+     
+      <h1 class="heading"> our <span> menu </span> </h1> 
+      
+      <div class="box-container"> 
+        
+        <div class="box item-1"> 
+          <img src="images/coffe1.jpg" alt="">
+          <h3> Cappuccino </h3>
+          <div class="price"> $5.00  <span> $15.00 </span> </div>
+          <a  class="btn" onclick="addHTML('Cappuccino','coffe1', '5.00')"> add to cart </a>
+        </div>
+
+        <div class="box"> 
+          <img src="images/coffe2.jpg" alt="">
+          <h3> Americano </h3>
+          <div class="price"> $5.00  <span> $15.00 </span> </div>
+          <a  class="btn " onclick="addHTML('Americano','coffe2' ,'5.00')"> add to cart </a>
+        </div>
+
+        <div class="box"> 
+          <img src="images/coffe3.jpg" alt="">
+          <h3> Espresso </h3>
+          <div class="price"> $5.00  <span> $15.00 </span> </div>
+          <a class="btn" onclick="addHTML('Espresso','coffe3' ,'5.00')"> add to cart </a>
+        </div>
+
+        <div class="box"> 
+          <img src="images/coffe4.jpg" alt="">
+          <h3> Caffè macchiato </h3>
+          <div class="price"> $5.00  <span> $15.00 </span> </div>
+          <a  class="btn" onclick="addHTML('Caffè macchiato','coffe4' ,'5.00')"> add to cart </a>
+        </div>
+
+        <div class="box"> 
+          <img src="images/coffe5.jpg" alt="">
+          <h3> Caffè mocha </h3>
+          <div class="price"> $5.00 <span> $15.00 </span> </div>
+          <a class="btn" onclick="addHTML('Caffe mocha','coffe5', '5.00')"> add to cart </a>
+        
+        </div>
+
+        <div class="box"> 
+          <img src="images/coffe6.jpg" alt="">
+          <h3> Cortado </h3>
+          <div class="price"> $5.00  <span> 15.00 </span> </div>
+          <a class="btn" onclick="addHTML('Cortado','coffe6' , '5.00')"> add to cart </a>
+        </div>
+
+      </div>
+
+    </section>
+ <!----menu section-->>
+    <section class="products" id="products">
+      <h1 class="heading"> Morning <span> Menu </span></h1>
+
+      <div class="box-container">
+        <div class="box"> 
+           <div class="icons">
+            <a class="fas fa-shopping-cart" onclick="addHTML('Croassant & Coffee','Croassant' , '8.00');"> </a>
+           </div>
+
+           <div class="image">  
+            <img src="images/Croassant.jpg" alt=""> <!-- ADD IMAGE --> 
+           </div>
+
+           <div class="content"> 
+              <h3> Croassant & Coffee </h3>
+              <div class="stars"> 
+                <i class="fas fa-star"> </i>
+                <i class="fas fa-star"> </i>
+                <i class="fas fa-star"> </i>
+                <i class="fas fa-star"> </i>
+                <i class="fas fa-star-half-alt"> </i>
+              </div>
+              <div class="price"> $8.00 <span> $15.00 </span></div>
+           </div>
+        </div>
+
+        <div class="box"> 
+          <div class="icons">
+           <a class="fas fa-shopping-cart"onclick="addHTML('Limon & Coffe','Limon', '9.00');"> </a>
+          
+          </div>
+
+          <div class="image"> 
+           <img src="images/Limon.jpg">
+          </div>
+
+          <div class="content"> 
+             <h3> Limon & Coffee </h3>
+             <div class="stars"> 
+               <i class="fas fa-star"> </i>
+               <i class="fas fa-star"> </i>
+               <i class="fas fa-star"> </i>
+               <i class="fas fa-star"> </i>
+               <i class="fas fa-star-half-alt"> </i>
+             </div>
+             <div class="price"> $9.00 <span> $15.00 </span></div>
+          </div>
+       </div>
+
+       <div class="box"> 
+        <div class="icons">
+         <a  class="fas fa-shopping-cart" onclick="addHTML('Chocolate & Coffee','Chocolate', '10.00');"> </a>
+       
+        </div>
+
+        <div class="image"> 
+         <img src="images/Chocolate.jpg">
+        </div>
+
+        <div class="content"> 
+           <h3> Chocolate & Coffee </h3>
+           <div class="stars"> 
+             <i class="fas fa-star"> </i>
+             <i class="fas fa-star"> </i>
+             <i class="fas fa-star"> </i>
+             <i class="fas fa-star"> </i>
+             <i class="fas fa-star-half-alt"> </i>
+           </div>
+           <div class="price"> $10.00 <span> $15.00 </span></div>
+        </div>
+     </div>
+      </div>
+    </section>
+
+    <section class="review" id="review">
+
+      <h1 class="heading"> Customer's <span> reviews </span></h1>
+      <div class="box-container">
+
+        <div class="box">
+           <img src="" alt="" class="quote"> 
+           <p> The website's user-friendly design and seamless navigation truly enhance the shopping experience. 
+            I appreciate how easy it is to find and order my favorite coffee blends. The stunning visuals and detailed descriptions make choosing the perfect coffee an absolute joy. 
+            Great job! </p>     
+             <img src="images/person3.jpg" class="user"> <!-- ADD PHOTOS -->
+             <h3> Olivia </h3> 
+             <div class="stars"> 
+              <i class="fas fa-star"> </i>
+              <i class="fas fa-star"> </i>
+              <i class="fas fa-star"> </i>
+              <i class="fas fa-star"> </i>
+              <i class="fas fa-star-half-alt"> </i>
+            </div>
+          </div>
+
+          <div class="box">
+            <img src="" alt="" class="quote"> 
+            <p> I'm impressed with the website's visually appealing layout and the vivid descriptions of each coffee product. It makes choosing a new blend an enjoyable experience. 
+              Plus, the quality of the coffee itself exceeded my expectations. Well done on creating such an engaging platform and delivering exceptional coffee!</p>     
+              <img src="images/Person1.jpg" class="user">
+              <h3> John </h3> 
+              <div class="stars"> 
+               <i class="fas fa-star"> </i>
+               <i class="fas fa-star"> </i>
+               <i class="fas fa-star"> </i>
+               <i class="fas fa-star"> </i>
+               <i class="fas fa-star-half-alt"> </i>
+             </div>
+           </div>
+
+           <div class="box">
+            <img src="" alt="" class="quote"> 
+            <p> The checkout process on the website is so smooth, and I love the personalized recommendations based on my preferences. It shows a deep understanding of customer needs. 
+              Thanks to the team for crafting a fantastic online shopping environment!
+              And , of course, the coffee is absolutely outstanding—every cup is a delight.</p>     
+              <img src="images/person2.jpg" class="user">
+              <h3> Emily </h3> 
+              <div class="stars"> 
+               <i class="fas fa-star"> </i>
+               <i class="fas fa-star"> </i>
+               <i class="fas fa-star"> </i>
+               <i class="fas fa-star"> </i>
+               <i class="fas fa-star-half-alt"> </i>
+             </div>
+           </div>
+
+      </div>
+     </section>
+ 
+     
+     <section class="contact" id="contact"> 
+      <section class="new-products" id="new-products"> 
+        <h1 class="heading-products"> NEW PRODUCTS </h1>
+ 
+        <div class="box-container">
+           <div class="box">
+               <div class="image">
+                 <img src="images/coffe1.jpg"> 
+               </div>
+           </div>
+ 
+           <div class="content">
+             <h2> Explore Our Latest Products </h2>
+             <p>  Explore our latest offerings, highlighting key features that make each product unique. Savor Joy in Every Sip to stylish designs, our new collection is crafted to elevate your experience. Discover innovative solutions and cutting-edge technologies that set our products apart. Immerse yourself in a world of creativity and sophistication with our curated selection of premium offerings. Elevate your lifestyle with our exceptional range of products, from cutting-edge tech to timeless designs, enhancing your daily experiences. </p>
+             <a href="index4.html" class="btn"> Learn more </a>
+           </div>
+ 
+        </div>
+ 
+     </section>
+
+     <div class="row"> 
+      <!-- IFRAME me qit naj lokacion random ose naj lokacion naj kafeje masi e kena kafe shop 
+        ose hiq pra masi o veq webiste pa lokal , pa lokal ku pe don lokacionin ? lmao -->
+        
+        <form action=""> 
+          <h3> get in touch </h3>
+          <h1 class="heading"> <span> contact </span> us </h1>
+          <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d681.9636301219305!2d21.146221400586107!3d42.65302560809877!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13549f47a5602081%3A0xec721f5ff5e05ca0!2sUBT%20College!5e0!3m2!1sen!2s!4v1699829392257!5m2!1sen!2s" 
+          width="600" height="450" style="border:0;" allowfullscreen="" 
+           loading="lazy" referrerpolicy="no-referrer-when-downgrade"> 
+           </iframe>
+          <!---<div class="inputBox">
+            <span class="fas fa-user"> </span>
+            <input type="text" placeholder="name">
+          </div>
+  
+          <div class="inputBox">
+            <span class="fas fa-envelope"> </span>
+            <input type="email" placeholder="email">
+          </div>
+  
+          <div class="inputBox">
+            <span class="fas fa-phone"> </span>
+            <input type="number" placeholder="number">
+          </div>
+  
+          <input type="submit" value="contact now" class="btn">  
+  
+          </form>
+       
+
+    </div>
+  ---->
+  </section>
+
+
+          <!--<section class="blogs" id="blogs">
+
+          <h1 class="heading"> our <span> blogs </span> </h1>
+
+          <div class="box-container"> 
+
+          <div class="box">
+
+           <div class="image">
+             <img src="images/second.jpg" alt="">
+           </div>
+
+           </div class="content">
+             <a href="#" class="title">tasty and refreshing coffee</a>
+             <span> by Uron and Abedin , 13 November 2023 </span>
+             <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit, laborum? </p>
+             <a href="#" class="btn"> read more </a>
+           </div>
+        </div>
+
+        <div class="box">
+
+         <div class="image">
+             <img src="" alt="">
+         </div>
+
+          </div class="content">
+          <a href="#" class="title">tasty and refreshing coffee</a>
+          <span> by Uron and Abedin , 13 November 2023 </span>
+          <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit, laborum? </p>
+          <a href="#" class="btn"> read more </a>
+          </div>
+     </div>
+
+           <div class="box">
+
+           <div class="image">
+             <img src="" alt="">
+          </div>
+
+          </div class="content">
+              <a href="#" class="title">tasty and refreshing coffee</a>
+              <span> by Uron and Abedin , 13 November 2023 </span>
+               <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit, laborum? </p>
+               <a href="#" class="btn"> read more </a>
+           </div>
+       </div>
+
+   </section> -->
+
+    <section class="footer"> 
+
+  
+      <div class="share">
+        <a href="#" class = "fab fa-facebook"> </a>
+        <a href="#" class = "fab fa-twitter"> </a>
+        <a href="#" class = "fab fa-youtube"> </a>
+        <a href="#" class = "fab fa-instagram"> </a>
+        <a href="#" class = "fab fa-linkedin"> </a>
+        <a href="#" class = "fab fa-pinterest"> </a>
+      </div>
+<!--
+       <div class="links"> 
+        <a href="#"> home </a>
+        <a href="#"> about </a> 
+        <a href="#"> menu </a>
+        <a href="#"> products </a>
+        <a href="#"> review </a>
+        <a href="#"> contact </a>
+        <a href="#"> blogs </a>
+      </div>
+    -->
+      <div class="credit"> created by <span> Abedin</span> | ALL RIGHTS RESERVED</div>
+
+    </section>
+
+   </div>
+
+   </section>
+
+  <script src = "script.js"> </script>
+   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+	<!-- Initialize Swiper -->
+  
+
+
+
+  </body>
+</html>

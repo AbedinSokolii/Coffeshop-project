@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coffee Shop</title>
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <!-- Slide 1 -->
+        <div class="swiper-slide swiper-slide1">
+          <section class="about1" id="about1">
+            <div class="row-products1">
+              <div class="image-products common-image">
+                <img src="images/coffe2.jpg" id="image" alt="Coffee 1" />
+              </div>
+              <div class="content-products1">
+                <h3 class="title-1">Affogato Coffee</h3>
+                <p class="description-1">
+                  The Affogato, a delightful fusion of dessert and coffee
+                  originating from Italy, features a scoop of vanilla ice cream
+                  generously drenched in a shot of hot espresso. This simple yet
+                  indulgent treat creates a harmonious contrast between the bold
+                  coffee and the sweet creaminess of the ice cream. The Affogato
+                  is a perfect choice for those seeking a balance of
+                  temperatures and textures, providing a satisfying blend of
+                  bitter and sweet in every decadent, spoonful delightfulness.
+                </p>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="swiper-slide swiper-slide2">
+          <section class="about2" id="about2">
+            <h1 class="heading-new-products2">
+              <span>Title</span>
+            </h1>
+            <div class="row-products2">
+              <div class="image-products common-image">
+                <img src="images/coffe1.jpg"id="image" alt="Coffee 2" />
+              </div>
+              <div class="content-products2-2">
+                <h3 class="title-2">Ristretto Coffee</h3>
+                <p class="description-2">
+                  The Ristretto, a bold espresso variant, delivers an intense
+                  coffee experience with a shorter extraction method. Crafted
+                  using the same amount of finely ground coffee but less water,
+                  it's a concentrated brew known for its robust flavor. This
+                  shorter extraction captures the pure essence of the beans,
+                  resulting in a powerful and nuanced taste. Ristretto
+                  enthusiasts appreciate its full-bodied character, making it an
+                  ideal choice for those who crave a condensed and intense,
+                  momentary, sip delight.
+                </p>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="swiper-slide swiper-slide3">
+          <section class="about3" id="about3">
+            <h1 class="heading-new-products3">
+              <span>Title</span>
+            </h1>
+            <div class="row-products3">
+              <div class="image-products common-image">
+                <img src="images/coffe4.jpg" id="image" alt="Coffee 3" />
+              </div>
+              <div class="content-products3-3">
+                <h3 class="title-3">Cascara Latte Coffee</h3>
+                <p class="description-3">
+                  Cascara Latte is a distinctive coffee creation that features
+                  cascara, the dried husk of coffee cherries. The cascara is
+                  carefully steeped to create a flavorful tea, which is then
+                  meticulously combined with expertly steamed milk to craft a
+                  latte with a subtly sweet and fruity undertone. This
+                  innovative beverage offers a unique twist, appealing to those
+                  who seek a harmonious blend of coffee and the natural
+                  sweetness of cascara. Enjoy this delightful and aromatic
+                  Cascara Latte for a uniquely satisfying coffee
+                </p>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+      <!-- Add Pagination -->
+      <div class="swiper-pagination"></div>
+      <!-- Add Navigation -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var swiper = new Swiper(".swiper-container", {
+          slidesPerView: 1,
+          spaceBetween: 10,
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+        });
+      });
+    </script>
+  </body>
+</html>

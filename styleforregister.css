@@ -1,0 +1,393 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: "Poppins", sans-serif;
+}
+
+/* Change profile issues : 1. When you change the profil name , pfp moves according to the length 
+                           2. Function isnt working 
+*/
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url(images/background1.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+body::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url(images/background2.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transform: 0.5s;
+}
+
+body.signup::after {
+  opacity: 1;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 10px;
+  z-index: 1000;
+}
+
+header {
+  background: rgba(67, 59, 59, 0.9); /* Darkened the background */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 7%;
+  border-bottom: 0.1rem solid rgba(255, 255, 255, 0.3);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.header .logo {
+  text-decoration: none;
+  position: fixed; /* Set position to fixed */
+  top: 0; /* Position it at the top */
+  left: 0; /* Position it at the left */
+  z-index: 1000; /* Set a high z-index value */
+}
+
+.header .logo img {
+  height: 5rem;
+  margin-left: 20px;
+}
+
+.header .navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.header .navbar a {
+  margin: 0 15px;
+  font-size: 1.6rem;
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+  display: inline-block;
+}
+
+.header .navbar a:hover {
+  color: black; /* Assuming you have a main color variable */
+}
+
+.profile-dropdown {
+  display: none;
+  position: absolute;
+  top: 20px;
+  right: 0;
+  background-color: #fff;
+  border: 20px solid #ccc;
+  border-radius: 40px 40px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-right: 585px;
+  margin-top: 245px;
+  height: 280px;
+  width: 350px;
+  z-index: 1000;
+}
+
+.profile-dropdown.active {
+  display: block;
+}
+
+#profile-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  font-size: 18px;
+  justify-content: center;
+}
+
+#profile-list::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0); /* Adjust the background color as needed */
+  transition: background 0.3s; /* Add a transition for a smoother effect */
+  z-index: -1;
+}
+
+#profile-list:hover::before {
+  background: rgba(0, 0, 0, 0.3); /* Set the background color on hover */
+}
+
+#profile-list li {
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.flex-box {
+  display: flex;
+  justify-content: center;
+}
+
+.profile-name {
+  margin-right: auto;
+  max-width: calc(
+    70% - 10px
+  ); /* Consider the margin in the max-width calculation */
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex-grow: 1;
+}
+
+.profile-image {
+  width: 55px;
+  height: 55px;
+  margin-bottom: 3px;
+  border-radius: 50%;
+  margin-left: 80px;
+  margin-top: 1px;
+  flex-shrink: 0; /* Prevent the image from shrinking */
+}
+
+#profile-list li:hover {
+  background-color: #f0f0f0;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+}
+
+#changeprofil {
+  cursor: pointer;
+  margin-right: 20px;
+  text-decoration: none;
+}
+
+#changeprofil:hover {
+  color: black;
+}
+
+/* Additional styles for the navbar if needed */
+
+.navbar {
+  display: flex;
+  align-items: center;
+}
+
+#changeprofil {
+  cursor: pointer;
+  margin-right: 20px;
+  text-decoration: none;
+}
+
+#changeprofil:hover {
+  color: black; /* Change the color on hover as desired */
+}
+
+.container {
+  position: relative;
+  width: 350px;
+  height: 340px;
+  border-radius: 15px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.25);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  transition: 0.5s;
+  overflow: hidden;
+}
+body.signup .container {
+  height: 440px;
+}
+.container::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    from var(--a),
+    #45f3ff 0%,
+    #45f3ff 10%,
+    transparent 10%,
+    transparent 80%,
+    #45f3ff 100%
+  );
+  border-radius: 20px;
+  animation: animate 2.5s linear infinite;
+}
+body.signup .container::before {
+  filter: hue-rotate(140deg);
+}
+@property --a {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+
+@keyframes animate {
+  0% {
+    --a: 0deg;
+  }
+
+  100% {
+    --a: 360deg;
+  }
+}
+
+.container span {
+  position: absolute;
+  inset: 5px;
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+.container span::before {
+  content: "";
+  position: absolute;
+  inset: 5px;
+  background: url(imagess/background1.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  filter: blur(10px);
+}
+
+.container span::after {
+  content: "";
+  position: absolute;
+  inset: 5px;
+  background: url(imagess/background2.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  filter: blur(15px);
+}
+body.signup .container span::before,
+body.signup .container span::after {
+  background: url(imagess/background2.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  filter: blur(15px);
+}
+
+form {
+  position: absolute;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  gap: 15px;
+  transform: 0.5s;
+}
+
+form#signupForm {
+  left: 100%;
+}
+body.signup form#signinForm {
+  left: -100%;
+}
+body.signup form#signupForm {
+  left: 0%;
+}
+form h2 {
+  position: relative;
+  color: #fff;
+  font-size: 1.5em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+form .inputBox {
+  position: relative;
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+}
+
+form .inputBox a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.85em;
+}
+
+form .inputBox a:nth-child(2) {
+  text-decoration: underline;
+}
+
+form .inputBox input {
+  width: 100%;
+  outline: none;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: rgba(0, 0, 0, 0.15);
+  padding: 6px 15px;
+  border-radius: 4px;
+  font-size: 0.85em;
+  color: #fff;
+}
+
+form .inputBox input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+form .inputBox input[type="submit"] {
+  background: #2196f3;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+form#signupForm .inputBox input[type="submit"] {
+  background: #f4242f;
+}
+
+form#signupForm b {
+  font-weight: 500;
+  color: #ffeb3b;
+  text-decoration: underline;
+}
+
+.password-toggle {
+  position: absolute;
+  margin-left: 180px;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.password-toggle:hover {
+  color: #555; /* Adjust the hover color as needed */
+}
